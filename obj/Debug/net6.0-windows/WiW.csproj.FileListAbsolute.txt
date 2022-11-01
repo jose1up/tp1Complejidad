@@ -1,0 +1,12 @@
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.csproj.AssemblyReference.cache
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.Form1.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.Form2.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.Consultas.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.FormUser.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.Inicio.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.Properties.Resources.resources
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.csproj.GenerateResource.cache
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.AssemblyInfoInputs.cache
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.AssemblyInfo.cs
+C:\Users\jose1\OneDrive\Desktop\Proyecto\TrabajoDeComplejidad\WiW_Visual\obj\Debug\net6.0-windows\WiW.csproj.CoreCompileInputs.cache
