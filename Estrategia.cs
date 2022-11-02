@@ -51,10 +51,14 @@ namespace tpfinal
         {
             if (clasificador.crearHoja())
             {
-                return new ArbolBinario<DecisionData>(clasificador.obtenerPregunta());
+                return new ArbolBinario<DecisionData>(new DecisionData(clasificador.obtenerDatoHoja()));
             }
             else
             {
+                ArbolBinario<DecisionData> res = new ArbolBinario<DecisionData>(new DecisionData(clasificador.obtenerPregunta()));
+                res.agregarHijoDerecho(CrearArbol(clasificador.obtenerClasificadorDerecho()));
+                res.agregarHijoIzquierdo(CrearArbol(clasificador.obtenerClasificadorIzquierdo()));
+                return res;
 
             }
 
