@@ -15,10 +15,10 @@ namespace tpfinal
             Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
             ArbolBinario<DecisionData> aux;
             Cola.Enqueue(arbol);
-            while (Cola.Count > 0)
+            while (Cola.Count != 0)
             {
                 aux = Cola.Dequeue();
-                aux.getDatoRaiz().ToString();
+                string result = aux.getDatoRaiz().ToString();
                 if (aux.getHijoDerecho() != null)
                 {
                     Cola.Enqueue(aux.getHijoDerecho());
@@ -27,6 +27,7 @@ namespace tpfinal
                 {
                     Cola.Enqueue(aux.getHijoIzquierdo());
                 }
+                return result;
 
             }
             return "Fin";
@@ -37,8 +38,29 @@ namespace tpfinal
 
         public String Consulta2(ArbolBinario<DecisionData> arbol)
         {
-            string resutl = "Implementar";
-            return resutl;
+            string result1 = "";
+
+            if (arbol.getDatoRaiz() != null)
+            {
+                result1 += arbol.getDatoRaiz().ToString();
+            }
+            else
+            {
+                if (arbol.getHijoIzquierdo() != null && arbol.getHijoDerecho() == null)
+                {
+                    Consulta2(arbol.getHijoIzquierdo());
+                }
+                if (arbol.getHijoIzquierdo() == null && arbol.getHijoDerecho() != null)
+                {
+
+                    Consulta2(arbol.getHijoDerecho());
+
+                }
+
+
+            }
+            return result1;
+
         }
 
         public String Consulta3(ArbolBinario<DecisionData> arbol)
