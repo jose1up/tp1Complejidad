@@ -85,7 +85,43 @@ namespace tpfinal
 
         public String Consulta3(ArbolBinario<DecisionData> arbol)
         {
-            string result = "Implementar";
+            int nivel = 0;
+            String result = "";
+            Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
+            ArbolBinario<DecisionData> aux;
+            Cola.Enqueue(arbol);
+            Cola.Enqueue(null);
+            while (Cola.Count != 0)
+            {
+                aux = Cola.Dequeue();
+
+                if (aux != null)
+                {
+                    result = result + nivel + aux.getDatoRaiz().ToString()+", ";
+                    if (aux.getHijoDerecho() != null)
+                    {
+                        Cola.Enqueue(aux.getHijoDerecho());
+                    }
+                    if (aux.getHijoIzquierdo() != null)
+                    {
+                        Cola.Enqueue(aux.getHijoIzquierdo());
+                    }
+                }
+                else
+                {
+                    if (Cola.Count != 0)
+                    {
+                        Cola.Enqueue(null);
+
+
+                    }
+                    ++nivel;
+                    result += "\n";
+                }
+
+
+            }
+
             return result;
         }
 
