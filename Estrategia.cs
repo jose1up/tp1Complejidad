@@ -12,25 +12,50 @@ namespace tpfinal
     {
         public String Consulta1(ArbolBinario<DecisionData> arbol)
         {
-            Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
-            ArbolBinario<DecisionData> aux;
-            Cola.Enqueue(arbol);
-            while (Cola.Count != 0)
-            {
-                aux = Cola.Dequeue();
-                string result = aux.getDatoRaiz().ToString();
-                if (aux.getHijoDerecho() != null)
-                {
-                    Cola.Enqueue(aux.getHijoDerecho());
-                }
-                if (aux.getHijoIzquierdo() != null)
-                {
-                    Cola.Enqueue(aux.getHijoIzquierdo());
-                }
-                return result;
+            // Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
+            // ArbolBinario<DecisionData> aux;
+            // Cola.Enqueue(arbol);
+            // while (Cola.Count != 0)
+            // {
+            //     aux = Cola.Dequeue();
+            //     string result = aux.getDatoRaiz().ToString();
+            //     if (aux.getHijoDerecho() != null)
+            //     {
+            //         Cola.Enqueue(aux.getHijoDerecho());
+            //     }
+            //     if (aux.getHijoIzquierdo() != null)
+            //     {
+            //         Cola.Enqueue(aux.getHijoIzquierdo());
+            //     }
+            //     return result;
 
+            // }
+            // return "Fin";
+
+            return "todas las hojas ";
+
+
+        }
+
+        private void Consulta2Private(ArbolBinario<DecisionData> arbol, ArrayList C, String Act)
+        {
+            string ACT = Act + "," + arbol.getDatoRaiz().ToString();
+            if (arbol.esHoja())
+            {
+                C.Add(ACT);
             }
-            return "Fin";
+            else
+            {
+                if (arbol.getHijoDerecho() != null)
+                {
+                    Consulta2Private(arbol.getHijoDerecho(), C, ACT);
+                }
+                if (arbol.getHijoIzquierdo() != null)
+                {
+                    Consulta2Private(arbol.getHijoIzquierdo(), C, ACT);
+                }
+            }
+
 
 
         }
@@ -39,27 +64,17 @@ namespace tpfinal
         public String Consulta2(ArbolBinario<DecisionData> arbol)
         {
             string result1 = "";
-
-            if (arbol.getDatoRaiz() != null)
+            ArrayList C = new ArrayList();
+            Consulta2Private(arbol, C, result1);
+            foreach (var item in C)
             {
-                result1 += arbol.getDatoRaiz().ToString();
-            }
-            else
-            {
-                if (arbol.getHijoIzquierdo() != null && arbol.getHijoDerecho() == null)
-                {
-                    Consulta2(arbol.getHijoIzquierdo());
-                }
-                if (arbol.getHijoIzquierdo() == null && arbol.getHijoDerecho() != null)
-                {
-
-                    Consulta2(arbol.getHijoDerecho());
-
-                }
-
+                result1 += item.ToString() + '\n';
 
             }
             return result1;
+
+
+
 
         }
 

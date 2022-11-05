@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jose1\\.nuget\\packages\\": {}
+    "C:\\Users\\skynet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jose1\\OneDrive\\Desktop\\Proyecto\\TrabajoDeComplejidad\\WiW_Visual\\WiW.csproj",
+      "projectUniqueName": "C:\\Users\\skynet\\Desktop\\Complejidad\\tp1Complejidad\\WiW.csproj",
       "projectName": "WiW",
-      "projectPath": "C:\\Users\\jose1\\OneDrive\\Desktop\\Proyecto\\TrabajoDeComplejidad\\WiW_Visual\\WiW.csproj",
-      "packagesPath": "C:\\Users\\jose1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jose1\\OneDrive\\Desktop\\Proyecto\\TrabajoDeComplejidad\\WiW_Visual\\obj\\",
+      "projectPath": "C:\\Users\\skynet\\Desktop\\Complejidad\\tp1Complejidad\\WiW.csproj",
+      "packagesPath": "C:\\Users\\skynet\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\skynet\\Desktop\\Complejidad\\tp1Complejidad\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jose1\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\skynet\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
