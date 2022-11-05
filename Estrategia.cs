@@ -12,28 +12,33 @@ namespace tpfinal
     {
         public String Consulta1(ArbolBinario<DecisionData> arbol)
         {
-            // Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
-            // ArbolBinario<DecisionData> aux;
-            // Cola.Enqueue(arbol);
-            // while (Cola.Count != 0)
-            // {
-            //     aux = Cola.Dequeue();
-            //     string result = aux.getDatoRaiz().ToString();
-            //     if (aux.getHijoDerecho() != null)
-            //     {
-            //         Cola.Enqueue(aux.getHijoDerecho());
-            //     }
-            //     if (aux.getHijoIzquierdo() != null)
-            //     {
-            //         Cola.Enqueue(aux.getHijoIzquierdo());
-            //     }
-            //     return result;
+            String result = "";
+            Queue<ArbolBinario<DecisionData>> Cola = new Queue<ArbolBinario<DecisionData>>();
+            ArbolBinario<DecisionData> aux;
+            Cola.Enqueue(arbol);
+            while (Cola.Count != 0)
+            {
+                aux = Cola.Dequeue();
 
-            // }
-            // return "Fin";
+                if (aux.esHoja())
+                {
+                    result = result + aux.getDatoRaiz().ToString() + "\n";
 
-            return "todas las hojas ";
 
+
+                }
+                if (aux.getHijoDerecho() != null)
+                {
+                    Cola.Enqueue(aux.getHijoDerecho());
+                }
+                if (aux.getHijoIzquierdo() != null)
+                {
+                    Cola.Enqueue(aux.getHijoIzquierdo());
+                }
+
+            }
+
+            return result;
 
         }
 
